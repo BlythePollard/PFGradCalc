@@ -155,12 +155,12 @@
     var fivePerWeek = credits / 5 / weeks * months;
     var fifteenPerWeek = credits / 15 / weeks * months;
 
-    var onePerWeek = Math.round(onePerWeek);
-    var twoPerWeek = Math.round(twoPerWeek);
-    var threePerWeek = Math.round(threePerWeek);
-    var fourPerWeek = Math.round(fourPerWeek);
-    var fivePerWeek = Math.round(fivePerWeek);
-    var fifteenPerWeek = Math.round(fifteenPerWeek);
+    var onePerWeek = onePerWeek.toFixed(2);
+    var twoPerWeek = twoPerWeek.toFixed(2);
+    var threePerWeek = threePerWeek.toFixed(2);
+    var fourPerWeek = fourPerWeek.toFixed(2);
+    var fivePerWeek = fivePerWeek.toFixed(2);
+    var fifteenPerWeek = fifteenPerWeek.toFixed(2)
 
     document.getElementById('sampleOne').innerHTML = onePerWeek; 
     document.getElementById('sampleTwo').innerHTML = twoPerWeek;
