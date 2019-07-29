@@ -1,0 +1,48 @@
+* {
+	font-family: Nunito;
+}
+
+#tableLeft {
+	float:left;
+}
+
+h2 {
+	border: 2px solid navy;
+	background-color: #21AFAE;
+	color: white;
+	padding: 20px;
+	width: 500px;
+		
+}
+
+/*Why is p less wide than h2 even though they're the same pixel amount?*/
+
+	#answer {
+		background-color: navy;
+		color: white;
+		padding:3px;
+		width:400px;
+	}
+
+	#calculatebutton {
+		width: 150px;
+		border: 2px solid navy;
+		padding: 5px;
+		background-color: #21AFAE;
+	}
+
+	/*
+ 	#container {
+ 		width: 600px;
+ 		margin-left: auto;
+ 		margin-right: auto;
+ 	}
+	#left {
+		width: 300px;
+		float: left;
+	}
+	#right {
+		width: 300px;
+		float: right;
+	}*/
+	</style>

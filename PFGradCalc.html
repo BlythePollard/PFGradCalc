@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  
+  <head>
+    <title>Guild Graduation Calculator!</title>
+    <link href="file:///C:/Users/Blythe%20Pollard/webdev-intro/v2.css" type="text/css" rel="stylesheet"/>
+  </head>
+
+  <center>
+  <body>
+    <h1><u> Penn Foster Graduation Calculator </u></h1>
+  </body>
+
+  <h2> Use This Page to Calculate Graduation!</h2>
+
+  <p id="answer"> Enter Class Information Below </p>
+    <table>
+      <tr>
+      <td>
+      <br>
+      <tr> 
+        <th>Orientation to High School</th>
+        <td><input type="number" value="2" class="credit-input" id="quantity1"/> </td>
+      </tr>
+      <tr> 
+        <th>Human Relations</th>
+        <td><input type="number" value="3" class="credit-input" id="quantity2"/> </td>
+        </th>
+      </tr>
+      <tr> 
+        <th>Reading Skills</th>
+        <td><input type="number" value="3" class="credit-input" id="quantity3"/> </td>
+      </tr>
+      <tr> 
+        <th>Civics</th>
+        <td><input type="number" value="4" class="credit-input" id="quantity4"/> </td>
+      </tr>
+      <tr> 
+        <th>Basic English</th>
+        <td><input type="number" value="4" class="credit-input" id="quantity5"/> </td>
+      </tr>
+      <tr> 
+        <th>General Math 1</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity6"/> </td>
+      </tr>
+      <tr> 
+        <th>Fitness & Nutrition</th>
+        <td><input type="number" value="6" class="credit-input" id="quantity7"/> </td>
+      </tr>
+      <tr> 
+        <th>American History</th>
+        <td><input type="number" value="7" class="credit-input" id="quantity8"/> </td>
+      </tr>
+      <tr> 
+        <th>Practical English</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity9"/> </td>
+      </tr>
+      <tr> 
+        <th>Consumer Math</th>
+        <td><input type="number" value="3" class="credit-input" id="quantity10"/> </td>
+      </tr>
+      <tr> 
+        <th>Earth Science</th>
+        <td><input type="number" value="6" class="credit-input" id="quantity11"/> </td>
+      </tr>
+      <tr> 
+        <th>Written Communication</th>
+        <td><input type="number" value="6" class="credit-input" id="quantity12"/> </td>
+      </tr>
+      <tr> 
+        <th>Biology</th>
+        <td><input type="number" value="6" class="credit-input" id="quantity13"/> </td>
+      </tr>
+      <tr> 
+        <th>General Math 2</th>
+        <td><input type="number" value="4" class="credit-input" id="quantity14"/> </td>
+      </tr>
+      <tr> 
+        <th>World History</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity15"/> </td>
+      </tr>
+      <tr> 
+        <th>Physical Science</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity16"/> </td>
+      </tr>
+      <tr> 
+        <th>Literature</th>
+        <td><input type="number" value="7" class="credit-input" id="quantity17"/> </td>
+      </tr>
+      <tr> 
+        <th>Elective 1</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity18"/> </td>
+      </tr>
+      <tr> 
+        <th>Elective 2</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity19"/> </td>
+      </tr>
+      <tr> 
+        <th>Elective 3</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity20"/> </td>
+      </tr>
+      <tr> 
+        <th>Elective 4</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity21"/> </td>
+      </tr>
+      <tr> 
+        <th>Elective 5</th>
+        <td><input type="number" value="5" class="credit-input" id="quantity22"/> </td>
+</table>
+
+
+<br><br>
+<div id="calculatebutton">
+<input type="button" value="Calculate" onclick="calculateGradDate()">
+</div>
+<br>
+<div id="results">
+<p>1 Exam Per Week: Graduate in <span id="sampleOne" class="monthsAmount" ></span> Months 
+</p>
+<p>2 Exams Per Week: Graduate in <span id="sampleTwo" class="monthsAmount"></span> Months
+</p>
+<p>3 Exams Per Week: Graduate in <span id="sampleThree" class="monthsAmount"></span> Months
+</p>
+<p>4 Exams Per Week: Graduate in <span id="sampleFour" class="monthsAmount"></span> Months
+</p>
+<p>5 Exams Per Week: Graduate in <span id="sampleFive" class="monthsAmount"></span> Months
+</p>
+<p>15 Exams Per Week: Graduate in <span id="sampleSix" class="monthsAmount"></span> Months
+</p>
+
+
+</center>
+
+<script>
+  function sumCredits() {
+    var items = document.getElementsByClassName('credit-input');
+    var totalCredits = 0
+    for(var i=0; i < items.length; i++) {
+      var itemValue = items[i].value;
+      totalCredits += parseFloat(itemValue);
+     }
+           return totalCredits;
+    }
+
+
+  function calculateGradDate() {
+    var credits = sumCredits();
+    var weeks = 52
+    var months = 12;
+    var onePerWeek = credits / weeks * months;
+    var twoPerWeek = credits / 2 / weeks * months;
+    var threePerWeek = credits / 3 / weeks * months;
+    var fourPerWeek = credits / 4 / weeks * months;
+    var fivePerWeek = credits / 5 / weeks * months;
+    var fifteenPerWeek = credits / 15 / weeks * months;
+
+    var onePerWeek = Math.round(onePerWeek);
+    var twoPerWeek = Math.round(twoPerWeek);
+    var threePerWeek = Math.round(threePerWeek);
+    var fourPerWeek = Math.round(fourPerWeek);
+    var fivePerWeek = Math.round(fivePerWeek);
+    var fifteenPerWeek = Math.round(fifteenPerWeek);
+
+    document.getElementById('sampleOne').innerHTML = onePerWeek; 
+    document.getElementById('sampleTwo').innerHTML = twoPerWeek;
+    document.getElementById('sampleThree').innerHTML = threePerWeek;
+    document.getElementById('sampleFour').innerHTML = fourPerWeek;
+    document.getElementById('sampleFive').innerHTML = fivePerWeek;
+    document.getElementById('sampleSix').innerHTML = fifteenPerWeek;
+
+  }
+
+</script>
+</html>
