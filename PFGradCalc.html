@@ -4,18 +4,18 @@
   
   <head>
     <title>Guild Graduation Calculator!</title>
-    <link href="file:///C:/Users/Blythe%20Pollard/webdev-intro/v2.css" type="text/css" rel="stylesheet"/>
+    <link href="file:///C:/Users/Blythe%20Pollard/webdev-intro/pfgradcalc.css" type="text/css" rel="stylesheet"/>
   </head>
 
   <center>
-  <body>
-    <h1><u> Penn Foster Graduation Calculator </u></h1>
+  <body id="body">
+    <h1>Penn Foster Graduation Calculator</h1>
   </body>
 
-  <h2> Use This Page to Calculate Graduation!</h2>
+  <h2 id="headingTwo"> Use This Page to Calculate Graduation!</h2>
 
-  <p id="answer"> Enter Class Information Below </p>
-    <table>
+  <p id="answer"> <u> Enter Class Information Below </u> </p>
+    <table id="classes">
       <tr>
       <td>
       <br>
@@ -42,7 +42,7 @@
       </tr>
       <tr> 
         <th>General Math 1</th>
-        <td><input type="number" value="5" class="credit-input" id="quantity6"/> </td>
+        <td><input type="number" value="6" class="credit-input" id="quantity6"/> </td>
       </tr>
       <tr> 
         <th>Fitness & Nutrition</th>
@@ -112,22 +112,15 @@
 
 <br><br>
 <div id="calculatebutton">
-<input type="button" value="Calculate" onclick="calculateGradDate()">
-</div>
-<br>
-<div id="results">
-<p>1 Exam Per Week: Graduate in <span id="sampleOne" class="monthsAmount" ></span> Months 
-</p>
-<p>2 Exams Per Week: Graduate in <span id="sampleTwo" class="monthsAmount"></span> Months
-</p>
-<p>3 Exams Per Week: Graduate in <span id="sampleThree" class="monthsAmount"></span> Months
-</p>
-<p>4 Exams Per Week: Graduate in <span id="sampleFour" class="monthsAmount"></span> Months
-</p>
-<p>5 Exams Per Week: Graduate in <span id="sampleFive" class="monthsAmount"></span> Months
-</p>
-<p>15 Exams Per Week: Graduate in <span id="sampleSix" class="monthsAmount"></span> Months
-</p>
+  <input type="button" value="Calculate" onclick="calculateGradDate">
+    </div><br>
+      <div id="results">
+        <p>1 Exam Per Week: Graduate in <span id="sampleOne" class="monthsAmount" ></span> Months</p>
+        <p>2 Exams Per Week: Graduate in <span id="sampleTwo" class="monthsAmount"></span> Months</p>
+        <p>3 Exams Per Week: Graduate in <span id="sampleThree" class="monthsAmount"></span> Months</p>
+        <p>4 Exams Per Week: Graduate in <span id="sampleFour" class="monthsAmount"></span> Months</p>
+        <p>5 Exams Per Week: Graduate in <span id="sampleFive" class="monthsAmount"></span> Months</p>
+        <p>15 Exams Per Week: Graduate in <span id="sampleSix" class="monthsAmount"></span> Months</p>
 
 
 </center>
@@ -142,7 +135,7 @@
      }
            return totalCredits;
     }
-
+console.log(sumCredits)
 
   function calculateGradDate() {
     var credits = sumCredits();
@@ -160,7 +153,7 @@
     var threePerWeek = threePerWeek.toFixed(2);
     var fourPerWeek = fourPerWeek.toFixed(2);
     var fivePerWeek = fivePerWeek.toFixed(2);
-    var fifteenPerWeek = fifteenPerWeek.toFixed(2)
+    var fifteenPerWeek = fifteenPerWeek.toFixed(2);
 
     document.getElementById('sampleOne').innerHTML = onePerWeek; 
     document.getElementById('sampleTwo').innerHTML = twoPerWeek;
@@ -168,7 +161,6 @@
     document.getElementById('sampleFour').innerHTML = fourPerWeek;
     document.getElementById('sampleFive').innerHTML = fivePerWeek;
     document.getElementById('sampleSix').innerHTML = fifteenPerWeek;
-
   }
 
 </script>
