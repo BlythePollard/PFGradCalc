@@ -2,33 +2,29 @@
 <html>
 <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
   
-  <head>
-    <title>Guild Graduation Calculator!</title>
-    <link href="file:///C:/Users/Blythe%20Pollard/webdev-intro/pfgradcalc.css" type="text/css" rel="stylesheet"/>
-  </head>
+<head>
+   <title>Guild Graduation Calculator!</title>
+   <link href="file:///C:/Users/Blythe%20Pollard/webdev-intro/PFGradCalc.css" type="text/css" rel="stylesheet"/>
+    </head>
 
-  <center>
-  <body id="body">
-    <h1>Penn Foster Graduation Calculator</h1>
-  </body>
+<center>
+<body>
+  <h1 id="body"><u> Penn Foster Graduation Calculator </u></h1>
+</body>
 
-  <h2 id="headingTwo"> Use This Page to Calculate Graduation!</h2>
+<h2 id="headingTwo"> Use This Page to Calculate Graduation!</h2>
 
-  <p id="answer"> <u> Enter Class Information Below </u> </p>
-    <table id="classes">
-      <tr>
-      <td>
-      <br>
-      <tr> 
+<p id="answer"> Enter Class Information Below </p>
+  <table id="classes">
+     <tr> 
         <th>Orientation to High School</th>
         <td><input type="number" value="2" class="credit-input" id="quantity1"/> </td>
-      </tr>
-      <tr> 
+     </tr>
+     <tr> 
         <th>Human Relations</th>
         <td><input type="number" value="3" class="credit-input" id="quantity2"/> </td>
-        </th>
-      </tr>
-      <tr> 
+     </tr>
+     <tr> 
         <th>Reading Skills</th>
         <td><input type="number" value="3" class="credit-input" id="quantity3"/> </td>
       </tr>
@@ -109,19 +105,21 @@
         <td><input type="number" value="5" class="credit-input" id="quantity22"/> </td>
 </table>
 
+<br>
 
-<br><br>
 <div id="calculatebutton">
-  <input type="button" value="Calculate" onclick="calculateGradDate">
-    </div><br>
-      <div id="results">
-        <p>1 Exam Per Week: Graduate in <span id="sampleOne" class="monthsAmount" ></span> Months</p>
-        <p>2 Exams Per Week: Graduate in <span id="sampleTwo" class="monthsAmount"></span> Months</p>
-        <p>3 Exams Per Week: Graduate in <span id="sampleThree" class="monthsAmount"></span> Months</p>
-        <p>4 Exams Per Week: Graduate in <span id="sampleFour" class="monthsAmount"></span> Months</p>
-        <p>5 Exams Per Week: Graduate in <span id="sampleFive" class="monthsAmount"></span> Months</p>
-        <p>15 Exams Per Week: Graduate in <span id="sampleSix" class="monthsAmount"></span> Months</p>
+  <input type="button" value="Calculate" onclick="calculateGradDate()">
+</div>
+<br>
 
+<div id="results">
+  <p>1 Exam Per Week: Graduate in <span id="sampleOne" class="monthsAmount" ></span> Months</p>
+  <p>2 Exams Per Week: Graduate in <span id="sampleTwo" class="monthsAmount"></span> Months</p>
+  <p>3 Exams Per Week: Graduate in <span id="sampleThree" class="monthsAmount"></span> Months</p>
+  <p>4 Exams Per Week: Graduate in <span id="sampleFour" class="monthsAmount"></span> Months</p>
+  <p>5 Exams Per Week: Graduate in <span id="sampleFive" class="monthsAmount"></span> Months</p>
+  <p>15 Exams Per Week: Graduate in <span id="sampleSix" class="monthsAmount"></span> Months</p>
+</div>
 
 </center>
 
@@ -135,7 +133,7 @@
      }
            return totalCredits;
     }
-console.log(sumCredits)
+
 
   function calculateGradDate() {
     var credits = sumCredits();
@@ -153,7 +151,7 @@ console.log(sumCredits)
     var threePerWeek = threePerWeek.toFixed(2);
     var fourPerWeek = fourPerWeek.toFixed(2);
     var fivePerWeek = fivePerWeek.toFixed(2);
-    var fifteenPerWeek = fifteenPerWeek.toFixed(2);
+    var fifteenPerWeek = fifteenPerWeek.toFixed(2)
 
     document.getElementById('sampleOne').innerHTML = onePerWeek; 
     document.getElementById('sampleTwo').innerHTML = twoPerWeek;
@@ -161,6 +159,7 @@ console.log(sumCredits)
     document.getElementById('sampleFour').innerHTML = fourPerWeek;
     document.getElementById('sampleFive').innerHTML = fivePerWeek;
     document.getElementById('sampleSix').innerHTML = fifteenPerWeek;
+
   }
 
 </script>
